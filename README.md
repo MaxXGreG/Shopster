@@ -1,2 +1,2 @@
 # Shopr
-A cool shopping list.
+A cool shopping list website.
