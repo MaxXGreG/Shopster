@@ -1,2 +1,2 @@
-# Shopr
+# Shopster
 A cool shopping list.
