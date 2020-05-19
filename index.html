@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel='icon' type='image/x-icon'/ href="./cart.png">
+    <script src="https://kit.fontawesome.com/a9e48246d3.js" crossorigin="anonymous"></script>
+    <title>Shopster</title>
+</head>
+<body onload="refresh()">
+    a
+    <div id="top">
+        <h1 id="title">Shopster, Your Store Companion</h1>
+        
+        <div id="burger">
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+        </div>
+    </div>
+
+    <div id="list">
+        
+    </div>
+
+    <div id="new">
+        <i id="plus" class="fas fa-plus-circle" onclick="showModal()"></i>
+        <i id="question" class="fas fa-question" onclick="showModal2()"></i>
+        <i id="done" class="fas fa-check" onclick="showModal3()"></i>
+        <i id="sticky" class="fas fa-sticky-note" onclick="openTemplate()"></i>
+    </div>
+
+    <dialog id="modal">
+        <label for="">Item </label>
+        <br>
+        <input type="text" id="modal-input-item">
+        <br><br>
+        <label for="">Amount: </label>
+        <br>
+        <input type="number" min="0" id="modal-input-amount">
+        <br><br>
+        <label for="">Metric: </label>
+        <br>
+        <input type="text" id="modal-input-metric">
+        <br><br>
+        <button class="btn" value="add" onclick="closeModal(this);">Add</button>
+        <button class="btn btn-cancel" value="cancel" onclick="closeModal(this)">Cancel</button>
+    </dialog>
+
+    <dialog id="modal2">
+        <p>Hello, this web site is very simple, to create an item and put it on the shoping list press the small plus at the bottom and enter the name, amount and metric of the desired item. 
+            When you want to mark it as bought press the blue check icon and if you desire to see everything that you bought, you can see all bought items if you click the green check icon at the bottom left, if you want to clear the whole "bought" section click the clear button in it.
+        </p>
+        <button onclick="closeModal2()" type="button" class="btn btn-cancel">Close</button>
+    </dialog>
+
+    <dialog id="modal3">
+        <h1>Bought Items:</h1>
+        <br>
+        <div id="done-items"></div>
+        <button type="button" class="btn" onclick="closeModal3()">OK</button>
+        <button type="button" class="btn btn-cancel" onclick="clearDone(); closeModal3(); boughtReload()">Clear</button>
+    </dialog>
+
+    <dialog id="modal4">
+        <label for="">Amount: </label>
+        <br>
+        <input type="number" min="0" id="modal-input-amount-change">
+        <br><br>
+        <button onclick="closeModal4(this)" class="btn" value="OK">OK</button>
+        <button onclick="closeModal4(this)" class="btn btn-cancel" value="cancelChange">Cancel</button>
+    </dialog>
+
+    <dialog id="template"> 
+        <h1>Template:</h1>
+        
+        <div id="template-items">
+
+        </div>
+        
+        <br><br>
+
+        <div id="temp-btns">
+            <button class="btn btn-cancel" onclick="closeTemplate()">OK</button>               
+            <button id="add" class="btn" onclick="openModal5()">Add</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal5"> 
+        <label for="">Item </label>
+        <br>
+        <input id="tem-item" type="text">
+        <br><br><br>
+
+        <button class="btn" id="addtemp" onclick="addTemplateItem()" value="Addtem">Add</button>
+        <button class="btn btn-cancel" id="cantemp" onclick="closeModal5()" value="cancel">Cancel</button>
+    </dialog>
+
+    <script src="./script.js"></script>
+</body>
+</html>
